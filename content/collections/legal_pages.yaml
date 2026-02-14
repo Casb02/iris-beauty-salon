@@ -1,0 +1,7 @@
+title: 'Legal Pages'
+route: '/{slug}'
+template: legal_page
+layout: layout
+revisions: false
+date: false
+sort_dir: asc

@@ -1,0 +1,32 @@
+title: Contact
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Naam
+              required: true
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              type: text
+              display: E-mail
+              required: true
+              validate:
+                - required
+                - email
+          -
+            handle: message
+            field:
+              type: textarea
+              display: Bericht
+              required: true
+              validate:
+                - required

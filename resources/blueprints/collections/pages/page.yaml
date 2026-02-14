@@ -1,0 +1,290 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Hero
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: hero_eyebrow
+            field:
+              type: text
+              display: Eyebrow
+          -
+            handle: hero_title_line_one
+            field:
+              type: text
+              display: Title Line One
+          -
+            handle: hero_title_line_two
+            field:
+              type: text
+              display: Title Line Two (Accent)
+          -
+            handle: hero_title_line_three
+            field:
+              type: text
+              display: Title Line Three
+          -
+            handle: hero_intro
+            field:
+              type: textarea
+              display: Intro
+          -
+            handle: hero_primary_cta_text
+            field:
+              type: text
+              display: Primary CTA Text
+          -
+            handle: hero_primary_cta_url
+            field:
+              type: text
+              display: Primary CTA URL
+          -
+            handle: hero_secondary_cta_text
+            field:
+              type: text
+              display: Secondary CTA Text
+          -
+            handle: hero_secondary_cta_url
+            field:
+              type: text
+              display: Secondary CTA URL
+          -
+            handle: hero_decorative_letter
+            field:
+              type: text
+              display: Decorative Letter
+              default: B
+      -
+        display: Intro
+        fields:
+          -
+            handle: intro_label
+            field:
+              type: text
+              display: Label
+          -
+            handle: intro_title_lead
+            field:
+              type: text
+              display: Title Lead
+          -
+            handle: intro_title_emphasis
+            field:
+              type: text
+              display: Title Emphasis
+          -
+            handle: intro_body
+            field:
+              type: textarea
+              display: Body
+      -
+        display: Services
+        fields:
+          -
+            handle: services_section_id
+            field:
+              type: text
+              display: Section ID
+              default: diensten
+          -
+            handle: services_label
+            field:
+              type: text
+              display: Label
+          -
+            handle: services_title
+            field:
+              type: text
+              display: Title
+          -
+            handle: services_cta_text
+            field:
+              type: text
+              display: CTA Text
+          -
+            handle: services_cta_url
+            field:
+              type: text
+              display: CTA URL
+          -
+            handle: services
+            field:
+              type: grid
+              display: Services
+              add_row: Add Service
+              fields:
+                -
+                  handle: name
+                  field:
+                    type: text
+                    display: Name
+                -
+                  handle: description
+                  field:
+                    type: textarea
+                    display: Description
+      -
+        display: About
+        fields:
+          -
+            handle: about_section_id
+            field:
+              type: text
+              display: Section ID
+              default: over
+          -
+            handle: about_label
+            field:
+              type: text
+              display: Label
+          -
+            handle: about_title_lead
+            field:
+              type: text
+              display: Title Lead
+          -
+            handle: about_title_emphasis
+            field:
+              type: text
+              display: Title Emphasis
+          -
+            handle: about_title_tail
+            field:
+              type: text
+              display: Title Tail
+          -
+            handle: about_body_left
+            field:
+              type: textarea
+              display: Left Body
+          -
+            handle: about_body_right
+            field:
+              type: textarea
+              display: Right Body
+          -
+            handle: about_signature
+            field:
+              type: text
+              display: Signature
+              default: Iris
+          -
+            handle: about_pillars
+            field:
+              type: grid
+              display: Pillars
+              add_row: Add Pillar
+              fields:
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: Label
+      -
+        display: "Foto's"
+        fields:
+          -
+            handle: fotos_label
+            field:
+              type: text
+              display: Label
+          -
+            handle: fotos_title
+            field:
+              type: text
+              display: Title
+      -
+        display: Reviews
+        fields:
+          -
+            handle: reviews_label
+            field:
+              type: text
+              display: Label
+          -
+            handle: reviews_title
+            field:
+              type: text
+              display: Title
+          -
+            handle: reviews_embed_url
+            field:
+              type: text
+              display: Embed URL
+      -
+        display: Contact
+        fields:
+          -
+            handle: contact_section_id
+            field:
+              type: text
+              display: Section ID
+              default: contact
+          -
+            handle: contact_label
+            field:
+              type: text
+              display: Label
+          -
+            handle: contact_title
+            field:
+              type: text
+              display: Title
+          -
+            handle: contact_intro
+            field:
+              type: textarea
+              display: Intro
+          -
+            handle: contact_address
+            field:
+              type: text
+              display: Address
+          -
+            handle: contact_phone
+            field:
+              type: text
+              display: Phone
+          -
+            handle: contact_phone_label
+            field:
+              type: text
+              display: Phone Label
+          -
+            handle: contact_email
+            field:
+              type: text
+              display: Email
+          -
+            handle: contact_form_title
+            field:
+              type: text
+              display: Form Title
+          -
+            handle: contact_submit_text
+            field:
+              type: text
+              display: Submit Text
+      -
+        display: Footer
+        fields:
+          -
+            handle: footer_copyright
+            field:
+              type: text
+              display: Copyright
+          -
+            handle: footer_address
+            field:
+              type: text
+              display: Footer Address

@@ -1,0 +1,9 @@
+title: Pages
+route: '/'
+template: home
+layout: layout
+revisions: false
+date: false
+sort_dir: asc
+structure:
+  root: true

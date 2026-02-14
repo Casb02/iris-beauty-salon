@@ -1,0 +1,288 @@
+<div class="min-h-screen bg-white font-serif text-[#1a1a1a]" data-onepage-shell>
+    <header data-site-header class="fixed inset-x-0 top-0 z-50 py-6 transition-all duration-500">
+        <div class="mx-auto flex max-w-[1600px] items-center justify-between px-5 sm:px-8 lg:px-16">
+            <a href="#home" class="inline-flex items-center gap-3">
+                <img src="/logos/logo.png" alt="Iris Beauty Salon logo" class="h-10 w-auto sm:h-12">
+            </a>
+
+            <nav class="hidden items-center gap-16 lg:flex">
+                <a href="#home" class="text-[11px] tracking-[0.2em] uppercase text-[#666] transition-colors hover:text-[#1a1a1a]">Home</a>
+                <a href="#diensten" class="text-[11px] tracking-[0.2em] uppercase text-[#666] transition-colors hover:text-[#1a1a1a]">Diensten</a>
+                <a href="#over" class="text-[11px] tracking-[0.2em] uppercase text-[#666] transition-colors hover:text-[#1a1a1a]">Over mij</a>
+                <a href="#fotos" class="text-[11px] tracking-[0.2em] uppercase text-[#666] transition-colors hover:text-[#1a1a1a]">Foto's</a>
+                <a href="#contact" class="text-[11px] tracking-[0.2em] uppercase text-[#666] transition-colors hover:text-[#1a1a1a]">Contact</a>
+            </nav>
+
+            <button type="button" data-booking-trigger class="hidden bg-[#1a1a1a] px-8 py-3 text-[10px] tracking-[0.2em] text-white uppercase transition-all duration-300 hover:bg-[#f2cdd5] hover:text-[#1a1a1a] lg:inline-flex">Afspraak</button>
+
+            <button type="button" data-menu-toggle class="flex flex-col gap-1.5 p-2 lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+                <span data-bar-one class="h-0.5 w-6 bg-[#1a1a1a] transition-all"></span>
+                <span data-bar-two class="h-0.5 w-6 bg-[#1a1a1a] transition-all"></span>
+                <span data-bar-three class="h-0.5 w-6 bg-[#1a1a1a] transition-all"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" data-mobile-menu class="absolute top-full right-0 left-0 max-h-0 overflow-hidden border-t bg-white opacity-0 transition-all duration-300 lg:hidden">
+            <nav class="flex flex-col gap-5 p-8">
+                <a href="#home" class="text-[11px] tracking-[0.2em] uppercase text-[#666]">Home</a>
+                <a href="#diensten" class="text-[11px] tracking-[0.2em] uppercase text-[#666]">Diensten</a>
+                <a href="#over" class="text-[11px] tracking-[0.2em] uppercase text-[#666]">Over mij</a>
+                <a href="#fotos" class="text-[11px] tracking-[0.2em] uppercase text-[#666]">Foto's</a>
+                <a href="#contact" class="text-[11px] tracking-[0.2em] uppercase text-[#666]">Contact</a>
+                <button type="button" data-booking-trigger class="mt-4 bg-[#1a1a1a] px-8 py-3 text-center text-[10px] tracking-[0.2em] text-white uppercase">Afspraak</button>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="relative min-h-screen pt-24">
+        <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-16">
+            <div class="flex min-h-[calc(100vh-6rem)] flex-col justify-center gap-10 pb-12 lg:grid lg:grid-cols-12 lg:items-end lg:gap-8 lg:pb-20">
+                <div class="lg:col-span-7 lg:col-start-1 lg:self-center">
+                    <div class="mb-6 sm:mb-8">
+                        <span class="text-[11px] tracking-[0.3em] text-[#888] uppercase">{{ hero_eyebrow }}</span>
+                    </div>
+                    <h1 class="mb-6 text-6xl leading-[0.9] tracking-tight sm:mb-8 sm:text-6xl lg:text-8xl xl:text-[140px]">
+                        <span class="block">{{ hero_title_line_one }}</span>
+                        <span class="block italic text-[#f2cdd5]">{{ hero_title_line_two }}</span>
+                        <span class="block">{{ hero_title_line_three }}</span>
+                    </h1>
+                </div>
+
+                <div class="lg:col-span-4 lg:col-start-9 lg:mb-20 lg:self-end">
+                    <div class="border-l-2 border-[#f2cdd5] pl-6 sm:pl-8">
+                        <p class="mb-6 font-body text-sm leading-relaxed text-[#666] sm:mb-8 sm:text-base">{{ hero_intro }}</p>
+                        <div class="flex flex-wrap gap-4 sm:gap-6">
+                            <button type="button" data-booking-trigger class="bg-[#1a1a1a] px-6 py-3 text-[10px] tracking-[0.2em] text-white uppercase transition-all duration-300 hover:bg-[#f2cdd5] hover:text-[#1a1a1a] sm:px-8 sm:py-4">{{ hero_primary_cta_text }}</button>
+                            <a href="{{ hero_secondary_cta_url }}" class="flex items-center gap-2 text-[10px] tracking-[0.2em] text-[#1a1a1a] uppercase">
+                                <span>{{ hero_secondary_cta_text }}</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pointer-events-none absolute bottom-8 left-5 text-[120px] leading-none text-[#f2cdd5]/10 select-none sm:left-8 sm:text-[200px] lg:left-16 lg:text-[300px]">{{ hero_decorative_letter }}</div>
+    </section>
+
+    <section class="bg-[#faf9f8] py-16 sm:py-24 lg:py-48">
+        <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-16">
+            <div class="grid gap-10 sm:gap-16 lg:grid-cols-12">
+                <div class="lg:col-span-5">
+                    <span class="mb-4 block text-[10px] tracking-[0.4em] text-[#888] uppercase">{{ intro_label }}</span>
+                    <h2 class="text-3xl leading-[1.1] tracking-tight sm:text-4xl lg:text-6xl">
+                        {{ intro_title_lead }}
+                        <span class="italic text-[#f2cdd5]">{{ intro_title_emphasis }}</span>
+                    </h2>
+                </div>
+                <div class="flex flex-col justify-end lg:col-span-5 lg:col-start-8">
+                    <p class="font-body text-base leading-relaxed text-[#666] sm:text-lg">{{ intro_body }}</p>
+                    <div class="mt-8 h-0.5 w-24 bg-[#1a1a1a] sm:mt-12"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="{{ services_section_id }}" class="py-16 sm:py-24 lg:py-48">
+        <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-16">
+            <div class="mb-12 grid gap-6 sm:mb-20 sm:gap-8 lg:grid-cols-12">
+                <div class="lg:col-span-6">
+                    <span class="mb-4 block text-[10px] tracking-[0.4em] text-[#888] uppercase">{{ services_label }}</span>
+                    <h2 class="text-3xl tracking-tight sm:text-4xl lg:text-6xl">{{ services_title }}</h2>
+                </div>
+                <div class="flex items-end lg:col-span-4 lg:col-start-9">
+                    <a href="{{ services_cta_url }}" class="flex items-center gap-3 border-b border-[#1a1a1a] pb-2 text-[10px] tracking-[0.2em] text-[#1a1a1a] uppercase">
+                        {{ services_cta_text }}
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid gap-y-0 gap-x-16 lg:grid-cols-2">
+                {{ services }}
+                    <article class="group border-t border-[#e5e5e5] py-8 transition-colors duration-500 hover:border-[#f2cdd5] sm:py-12">
+                        <div class="flex items-start justify-between gap-4 sm:gap-8">
+                            <div class="flex-1">
+                                <span class="mb-3 block text-[11px] tracking-[0.3em] text-[#f2cdd5] sm:mb-4">{{ count }}</span>
+                                <h3 class="mb-3 text-xl transition-colors duration-300 group-hover:text-[#f2cdd5] sm:mb-4 sm:text-2xl lg:text-3xl">{{ name }}</h3>
+                                <p class="font-body text-sm text-[#888] sm:text-base">{{ description }}</p>
+                            </div>
+                            <div class="flex h-10 w-10 shrink-0 items-center justify-center border border-[#e5e5e5] transition-all duration-300 group-hover:border-[#1a1a1a] group-hover:bg-[#1a1a1a] sm:h-12 sm:w-12">
+                                <span class="text-[#888] transition-colors duration-300 group-hover:text-white">↗</span>
+                            </div>
+                        </div>
+                    </article>
+                {{ /services }}
+            </div>
+        </div>
+    </section>
+
+    <section id="{{ about_section_id }}" class="relative overflow-hidden bg-[#1a1a1a] py-16 text-white sm:py-24 lg:py-48">
+        <div class="pointer-events-none absolute top-0 right-0 hidden text-[400px] leading-none text-white/[0.02] select-none sm:block">Iris</div>
+        <div class="relative mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-16">
+            <div class="grid gap-10 sm:gap-16 lg:grid-cols-12">
+                <div class="lg:col-span-8">
+                    <span class="mb-4 block text-[10px] tracking-[0.4em] text-[#f2cdd5] uppercase">{{ about_label }}</span>
+                    <h2 class="mb-8 text-3xl leading-[1.1] tracking-tight sm:mb-12 sm:text-4xl lg:text-6xl">
+                        {{ about_title_lead }}
+                        <span class="italic text-[#f2cdd5]">{{ about_title_emphasis }}</span>
+                        {{ about_title_tail }}
+                    </h2>
+                    <div class="grid gap-8 sm:gap-12 lg:grid-cols-2">
+                        <p class="font-body text-sm leading-relaxed text-white/60 sm:text-base">{{ about_body_left }}</p>
+                        <p class="font-body text-sm leading-relaxed text-white/60 sm:text-base">{{ about_body_right }}</p>
+                    </div>
+                    <div class="mt-10 sm:mt-16"><span class="text-3xl italic text-[#f2cdd5] sm:text-4xl">- {{ about_signature }}</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fotos" class="py-16 sm:py-24 lg:py-48">
+        <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-16">
+            <div class="mb-12 text-center sm:mb-20">
+                <span class="mb-4 block text-[10px] tracking-[0.4em] text-[#888] uppercase">{{ fotos_label }}</span>
+                <h2 class="text-3xl tracking-tight sm:text-4xl lg:text-6xl">{{ fotos_title }}</h2>
+            </div>
+
+            <div class="columns-2 gap-4 sm:gap-6 lg:columns-3">
+                {{ assets container="images" }}
+                    <div class="mb-4 break-inside-avoid sm:mb-6">
+                        <img src="{{ glide:url width='800' }}" alt="{{ alt ?? 'Iris Beauty Salon' }}" class="w-full object-cover" loading="lazy">
+                    </div>
+                {{ /assets }}
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#faf9f8] py-16 sm:py-24 lg:py-48">
+        <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-16">
+            <div class="mb-12 text-center sm:mb-20">
+                <span class="mb-4 block text-[10px] tracking-[0.4em] text-[#888] uppercase">{{ reviews_label }}</span>
+                <h2 class="text-3xl tracking-tight sm:text-4xl lg:text-6xl">{{ reviews_title }}</h2>
+            </div>
+
+            <div class="flex justify-center">
+                <iframe src="{{ reviews_embed_url }}" data-page="reviews" class="w-full max-w-[700px] border-0" style="height: 1113.3px;" scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="{{ contact_section_id }}" class="py-16 sm:py-24 lg:py-48">
+        <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-16">
+            <div class="grid gap-10 sm:gap-16 lg:grid-cols-12">
+                <div class="lg:col-span-5">
+                    <span class="mb-4 block text-[10px] tracking-[0.4em] text-[#888] uppercase">{{ contact_label }}</span>
+                    <h2 class="mb-6 text-3xl tracking-tight sm:mb-8 sm:text-4xl lg:text-6xl">{{ contact_title }}</h2>
+                    <p class="mb-8 font-body text-sm leading-relaxed text-[#666] sm:mb-12 sm:text-base">{{ contact_intro }}</p>
+                    <div class="space-y-6 sm:space-y-8">
+                        <div>
+                            <span class="mb-2 block text-[10px] tracking-[0.3em] text-[#888] uppercase">Adres</span>
+                            <span class="font-body text-sm text-[#1a1a1a] sm:text-base">{{ contact_address }}</span>
+                        </div>
+                        <div>
+                            <span class="mb-2 block text-[10px] tracking-[0.3em] text-[#888] uppercase">Telefoon</span>
+                            <a href="tel:{{ contact_phone }}" class="font-body text-sm text-[#1a1a1a] transition-colors hover:text-[#f2cdd5] sm:text-base">{{ contact_phone_label }}</a>
+                        </div>
+                        <div>
+                            <span class="mb-2 block text-[10px] tracking-[0.3em] text-[#888] uppercase">E-mail</span>
+                            <a href="mailto:{{ contact_email }}" class="font-body text-sm text-[#1a1a1a] transition-colors hover:text-[#f2cdd5] sm:text-base">{{ contact_email }}</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#faf9f8] p-6 sm:p-10 lg:col-span-6 lg:col-start-7 lg:p-14">
+                    <h3 class="mb-8 text-xl sm:mb-10 sm:text-2xl">{{ contact_form_title }}</h3>
+                    {{ form:create in="contact" class="space-y-6 sm:space-y-8" }}
+                        <input type="text" name="{{ honeypot }}" tabindex="-1" autocomplete="off" class="hidden">
+
+                        {{ if success }}
+                            <div class="border border-[#d6e9da] bg-[#eef8f0] px-4 py-3 font-body text-sm text-[#1a1a1a] sm:px-5">
+                                Bedankt! Je bericht is verstuurd.
+                            </div>
+                        {{ /if }}
+
+                        {{ if errors }}
+                            <div class="border border-[#f1d7d7] bg-[#fff5f5] px-4 py-3 font-body text-sm text-[#1a1a1a] sm:px-5">
+                                {{ errors }}
+                                    <p>{{ value }}</p>
+                                {{ /errors }}
+                            </div>
+                        {{ /if }}
+
+                        {{ fields }}
+                            <div>
+                                <label for="{{ id }}" class="mb-3 block text-[10px] tracking-[0.2em] text-[#888] uppercase">{{ display }}</label>
+                                {{ if handle == "message" }}
+                                    <textarea id="{{ id }}" name="{{ name }}" rows="5" class="w-full resize-none bg-white px-4 py-3 font-body text-[#1a1a1a] transition-all focus:ring-2 focus:ring-[#f2cdd5] focus:outline-none sm:px-5 sm:py-4">{{ value }}</textarea>
+                                {{ elseif handle == "email" }}
+                                    <input id="{{ id }}" name="{{ name }}" type="email" value="{{ value }}" class="w-full bg-white px-4 py-3 font-body text-[#1a1a1a] transition-all focus:ring-2 focus:ring-[#f2cdd5] focus:outline-none sm:px-5 sm:py-4">
+                                {{ else }}
+                                    <input id="{{ id }}" name="{{ name }}" type="text" value="{{ value }}" class="w-full bg-white px-4 py-3 font-body text-[#1a1a1a] transition-all focus:ring-2 focus:ring-[#f2cdd5] focus:outline-none sm:px-5 sm:py-4">
+                                {{ /if }}
+                                {{ if error }}
+                                    <p class="mt-2 font-body text-xs text-[#b14343]">{{ error }}</p>
+                                {{ /if }}
+                            </div>
+                        {{ /fields }}
+
+                        <button type="submit" class="w-full bg-[#1a1a1a] py-4 text-[10px] tracking-[0.2em] text-white uppercase transition-all duration-300 hover:bg-[#f2cdd5] hover:text-[#1a1a1a] sm:py-5">{{ contact_submit_text }}</button>
+                    {{ /form:create }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-[#e5e5e5] py-10 sm:py-16">
+        <div class="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-16">
+            <div class="mb-8 flex flex-col items-center justify-between gap-6 sm:mb-12 sm:gap-8 lg:flex-row">
+                <a href="#home" class="inline-flex items-center gap-3">
+                    <img src="/logos/logo.png" alt="Iris Beauty Salon logo" class="h-10 w-auto sm:h-12">
+                </a>
+                <nav class="flex flex-wrap justify-center gap-6 sm:gap-12">
+                    <a href="#home" class="text-[10px] tracking-[0.15em] text-[#888] uppercase transition-colors hover:text-[#1a1a1a]">Home</a>
+                    <a href="#diensten" class="text-[10px] tracking-[0.15em] text-[#888] uppercase transition-colors hover:text-[#1a1a1a]">Diensten</a>
+                    <a href="#over" class="text-[10px] tracking-[0.15em] text-[#888] uppercase transition-colors hover:text-[#1a1a1a]">Over mij</a>
+                    <a href="#fotos" class="text-[10px] tracking-[0.15em] text-[#888] uppercase transition-colors hover:text-[#1a1a1a]">Foto's</a>
+                    <a href="#contact" class="text-[10px] tracking-[0.15em] text-[#888] uppercase transition-colors hover:text-[#1a1a1a]">Contact</a>
+                </nav>
+            </div>
+            <div class="flex flex-col items-center justify-between gap-3 font-body text-[10px] text-[#aaa] sm:gap-4 lg:flex-row">
+                <span>© {{ now format="Y" }} {{ footer_copyright }}</span>
+                <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 lg:justify-end">
+                    <span>{{ footer_address }}</span>
+                    <a href="/algemenevoorwaarden" class="text-[#888] transition-colors hover:text-[#1a1a1a]">Algemenevoorwaarden</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div data-booking-confirm class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/50 px-4 opacity-0 pointer-events-none transition-opacity duration-300 backdrop-blur-sm">
+        <div data-booking-confirm-panel class="w-full max-w-md translate-y-6 scale-[0.98] bg-white p-8 opacity-0 transition-all duration-300 ease-out sm:p-10">
+            <h3 class="mb-4 text-xl sm:text-2xl">Afspraak maken</h3>
+            <p class="mb-8 font-body text-sm leading-relaxed text-[#666] sm:text-base">
+                Door een afspraak te maken ga je akkoord met onze
+                <a href="/no-show-policy" target="_blank" rel="noopener noreferrer" class="text-[#1a1a1a] underline decoration-[#f2cdd5] decoration-2 underline-offset-4 transition-colors hover:text-[#f2cdd5]">no show policy</a>.
+            </p>
+            <div class="flex flex-col gap-3 sm:flex-row sm:gap-4">
+                <button type="button" data-booking-accept class="w-full bg-[#1a1a1a] px-8 py-3 text-[10px] tracking-[0.2em] text-white uppercase transition-all duration-300 hover:bg-[#f2cdd5] hover:text-[#1a1a1a] sm:w-auto">Akkoord</button>
+                <button type="button" data-booking-cancel class="w-full border border-[#e5e5e5] px-8 py-3 text-[10px] tracking-[0.2em] text-[#666] uppercase transition-all duration-300 hover:border-[#1a1a1a] hover:text-[#1a1a1a] sm:w-auto">Annuleer</button>
+            </div>
+        </div>
+    </div>
+
+    <div data-booking-modal class="fixed inset-0 z-[110] hidden flex flex-col bg-white opacity-0 pointer-events-none transition-opacity duration-300 lg:items-center lg:justify-center lg:bg-black/50 lg:backdrop-blur-sm">
+        <div data-booking-modal-panel class="flex h-full w-full translate-y-6 flex-col bg-white opacity-0 transition-all duration-300 ease-out lg:h-[90vh] lg:max-h-[800px] lg:w-full lg:max-w-2xl lg:scale-[0.98]">
+            <div class="flex items-center justify-between border-b border-[#e5e5e5] px-5 py-4 sm:px-8">
+                <span class="text-[11px] tracking-[0.3em] text-[#888] uppercase">Afspraak inplannen</span>
+                <button type="button" data-booking-close class="flex h-8 w-8 items-center justify-center text-[#888] transition-colors hover:text-[#1a1a1a]">
+                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="flex-1 overflow-hidden">
+                <iframe data-booking-iframe class="h-full w-full border-0" src="about:blank"></iframe>
+            </div>
+        </div>
+    </div>
+</div>

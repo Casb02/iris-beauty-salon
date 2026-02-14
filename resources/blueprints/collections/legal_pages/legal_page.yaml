@@ -1,0 +1,59 @@
+title: 'Legal Page'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Content
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: intro
+            field:
+              type: textarea
+              display: Intro
+              instructions: 'Shown directly below the page title.'
+          -
+            handle: content
+            field:
+              type: bard
+              display: Content
+              instructions: 'Use normal rich text sections and add Info Block sets for highlighted notes.'
+              always_show_set_button: true
+              buttons:
+                - h2
+                - h3
+                - bold
+                - italic
+                - underline
+                - unorderedlist
+                - orderedlist
+                - quote
+                - anchor
+              sets:
+                info_block:
+                  display: Info Block
+                  instructions: 'Use this for important notes or terms.'
+                  fields:
+                    -
+                      handle: label
+                      field:
+                        type: text
+                        display: Label
+                        default: Belangrijk
+                    -
+                      handle: heading
+                      field:
+                        type: text
+                        display: Heading
+                    -
+                      handle: body
+                      field:
+                        type: textarea
+                        display: Body
