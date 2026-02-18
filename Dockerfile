@@ -1,12 +1,12 @@
 # =========================================
-# Stage 1: Build frontend assets with Bun
+# Stage 1: Build frontend assets with Node
 # =========================================
-FROM oven/bun:1 AS frontend
+FROM node:20-alpine AS frontend
 
 WORKDIR /app
 
-COPY package.json bun.lock* ./
-RUN bun install --frozen-lockfile
+COPY package.json package-lock.json ./
+RUN npm ci
 
 COPY vite.config.js ./
 COPY resources/css resources/css
@@ -15,7 +15,7 @@ COPY resources/js resources/js
 # Vite needs a minimal Laravel setup to resolve the manifest
 COPY public public
 
-RUN bun run build
+RUN npm run build
 
 # =========================================
 # Stage 2: Production image (Nginx Unit)
