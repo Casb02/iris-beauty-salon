@@ -9,8 +9,7 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 COPY vite.config.js ./
-COPY resources/css resources/css
-COPY resources/js resources/js
+COPY resources resources
 
 # Vite needs a minimal Laravel setup to resolve the manifest
 COPY public public
