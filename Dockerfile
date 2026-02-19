@@ -78,8 +78,12 @@ RUN mkdir -p \
     storage/framework/views \
     storage/logs \
     bootstrap/cache \
-    && chown -R unit:unit storage bootstrap/cache \
-    && chmod -R 775 storage bootstrap/cache
+    && chown -R unit:unit \
+        storage \
+        bootstrap/cache \
+    && chmod -R 775 \
+        storage \
+        bootstrap/cache
 
 # Copy Unit config to entrypoint directory
 COPY unit.json /docker-entrypoint.d/unit.json
