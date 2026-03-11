@@ -21,7 +21,7 @@
                 "uri": "!/index.php"
             },
             "action": {
-                "share": "/var/www/html/public$uri",
+                "share": "/app/public$uri",
                 "fallback": {
                     "pass": "applications/laravel"
                 }
@@ -32,7 +32,7 @@
     "applications": {
         "laravel": {
             "type": "php",
-            "root": "/var/www/html/public/",
+            "root": "/app/public/",
             "script": "index.php"
         }
     }

@@ -51,7 +51,7 @@ RUN echo "memory_limit=256M" > /usr/local/etc/php/conf.d/custom.ini \
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
-WORKDIR /var/www/html
+WORKDIR /app
 
 # Copy application code
 COPY . .
@@ -76,21 +76,27 @@ RUN mkdir -p \
     storage/framework/sessions \
     storage/framework/views \
     storage/logs \
+    storage/app/public \
     bootstrap/cache \
     && chown -R unit:unit \
         storage \
         bootstrap/cache \
         content \
         users \
+        resources/blueprints \
     && chmod -R 775 \
         storage \
         bootstrap/cache \
         content \
-        users
+        users \
+        resources/blueprints
+
+COPY docker/start-container.sh /usr/local/bin/start-container.sh
+RUN chmod +x /usr/local/bin/start-container.sh
 
 # Copy Unit config to entrypoint directory
 COPY unit.json /docker-entrypoint.d/unit.json
 
 EXPOSE 8000
 
-CMD ["unitd", "--no-daemon"]
+CMD ["/usr/local/bin/start-container.sh"]
