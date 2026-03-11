@@ -212,6 +212,11 @@
                         {{ /if }}
 
                         {{ fields }}
+                            {{ if handle == "turnstile" }}
+                                <div>
+                                    {{ turnstile:field }}
+                                </div>
+                            {{ else }}
                             <div>
                                 <label for="{{ id }}" class="mb-3 block text-[10px] tracking-[0.2em] text-[#888] uppercase">{{ display }}</label>
                                 {{ if handle == "message" }}
@@ -225,6 +230,7 @@
                                     <p class="mt-2 font-body text-xs text-[#b14343]">{{ error }}</p>
                                 {{ /if }}
                             </div>
+                            {{ /if }}
                         {{ /fields }}
 
                         <button type="submit" class="w-full bg-[#1a1a1a] py-4 text-[10px] tracking-[0.2em] text-white uppercase transition-all duration-300 hover:bg-[#f2cdd5] hover:text-[#1a1a1a] sm:py-5">{{ contact_submit_text }}</button>

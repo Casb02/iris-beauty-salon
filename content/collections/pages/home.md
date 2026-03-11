@@ -3,12 +3,12 @@ id: e0d7d8d2-1080-4a75-9bc7-e31e7086af14
 blueprint: page
 title: 'Iris Beauty Salon'
 template: home
-updated_at: 1770557169
+updated_at: 1773246625
 hero_eyebrow: 'Welkom bij Iris Beauty Salon'
 hero_title_line_one: Ontdek
 hero_title_line_two: 'je ware'
 hero_title_line_three: schoonheid
-hero_intro: 'Een moment van ontspanning en verjonging in het hart van Hengelo. Wij geloven in natuurlijke schoonheid en persoonlijke aandacht.'
+hero_intro: 'Een moment van ontspanning en verjonging aan de rand van Hengelo. Wij geloven in natuurlijke schoonheid en persoonlijke aandacht.'
 hero_primary_cta_text: 'Afspraak inplannen'
 hero_primary_cta_url: '#contact'
 hero_secondary_cta_text: Diensten
@@ -30,8 +30,8 @@ services:
     description: 'Voeg een subtiele sparkle toe aan je glimlach met onze hoogwaardige tandkristallen.'
   -
     id: XZ6nNxEt
-    name: 'Tanden bleken'
-    description: 'Een stralend witte glimlach dankzij onze professionele bleekbehandelingen.'
+    name: Tandenbleken
+    description: 'Een stralend witte glimlach dankzij onze professionele bleekbehandelingen. Volledig peroxide vrij!'
   -
     id: NYjG4qX6
     name: Browlamination
@@ -42,7 +42,7 @@ services:
     description: 'Professioneel gevormde wenkbrauwen die perfect bij jouw gezicht passen.'
   -
     id: SzLZtKSz
-    name: Lashlifting
+    name: Lashlift
     description: 'Natuurlijk gelifte wimpers voor een open, frisse blik zonder mascara.'
 about_section_id: over
 about_label: 'Over Iris'
@@ -71,13 +71,13 @@ contact_section_id: contact
 contact_label: Contact
 contact_title: 'Laten we kennismaken'
 contact_intro: 'Heb je vragen of wil je direct een afspraak maken? Neem gerust contact op. Ik help je graag verder!'
-contact_address: 'Weldamstraat 2, Hengelo (OV), Overijssel'
+contact_address: 'Wegtersweg 80-84, 7556BR Hengelo (OV), Overijssel'
 contact_phone: '0618127760'
 contact_phone_label: '06 18127760'
 contact_email: info@irisbeautysalon.nl
 contact_form_title: 'Stuur een bericht'
 contact_submit_text: 'Verstuur bericht'
 footer_copyright: 'Iris Beauty Salon. Alle rechten voorbehouden.'
-footer_address: 'Weldamstraat 2, Hengelo (OV)'
-updated_by: 1
+footer_address: 'Wegtersweg 80-84, 7556BR Hengelo (OV)'
+updated_by: 3a49ac04-07d5-4c02-bea7-7c58f55b30bd
 ---

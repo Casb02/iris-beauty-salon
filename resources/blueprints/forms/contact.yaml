@@ -30,3 +30,8 @@ tabs:
               required: true
               validate:
                 - required
+          -
+            handle: turnstile
+            field:
+              type: turnstile
+              display: Beveiliging
