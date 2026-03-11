@@ -1,1 +1,6 @@
 title: Contact
+email:
+  -
+    id: p09LqYa0Bcc9sQVMnT0AE
+    to: info@irisbeautysalon.nl
+    mailer: smtp
