@@ -6,6 +6,7 @@ cd /app
 mkdir -p \
     bootstrap/cache \
     content \
+    public/assets \
     resources/blueprints \
     storage/app/public \
     storage/forms \
@@ -18,6 +19,7 @@ mkdir -p \
 chown -R unit:unit \
     bootstrap/cache \
     content \
+    public/assets \
     resources/blueprints \
     storage \
     users || true
@@ -25,6 +27,7 @@ chown -R unit:unit \
 chmod -R ug+rwX \
     bootstrap/cache \
     content \
+    public/assets \
     resources/blueprints \
     storage \
     users || true

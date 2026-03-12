@@ -43,6 +43,18 @@ This project has domain-specific skills available. You MUST activate the relevan
 - Stick to existing directory structure; don't create new base folders without approval.
 - Do not change the application's dependencies without approval.
 
+## Deployment Context
+
+- This project is deployed on Coolify, using the repository `Dockerfile` build path rather than Forge, Vapor, or a traditional shared-host setup.
+- The current production runtime is the Docker image built from this repo, based on `unit:1.34.1-php8.3`. Local/project metadata may mention PHP 8.5, but production debugging should assume PHP 8.3 unless the Dockerfile has changed and been redeployed.
+- The current Coolify application path on the server is `/data/coolify/applications/egs0w4w4g8g8goo800w0sokg`.
+- The current Coolify persistent volumes are mounted to `/app/content`, `/app/users`, `/app/storage/forms`, and `/app/public/assets`.
+- Important: the Statamic asset container in `content/assets/images.yaml` currently uses the `public` filesystem disk, which maps to `/app/storage/app/public` via `config/filesystems.php`. That is different from Coolify's mounted `/app/public/assets` volume. When debugging upload or persistence issues, check both the active disk path and the mounted volume path before assuming they match.
+- Typical Statamic deployment recipes persist both `content` and `storage`. In this project, Coolify currently persists `content` but only a subset of `storage` (`/app/storage/forms`). That means asset uploads written to `/app/storage/app/public` may not survive a redeploy unless Coolify is updated to persist that path too, or the asset container is intentionally moved to `/app/public/assets`.
+- For production upload failures, first verify the deployed container has the PHP extensions Statamic requires for assets, especially `exif`, plus writable runtime paths for `storage`, `bootstrap/cache`, and any mounted asset directories.
+- The Coolify UI currently runs this post-deploy command: `php artisan optimize:clear && php artisan config:clear && php artisan route:clear && php artisan view:clear && php artisan optimize && php artisan storage:link`.
+- If a frontend or control-panel change is missing online, remember that the fix may require a new Coolify redeploy so the Docker image is rebuilt from the updated repository state.
+
 ## Frontend Bundling
 
 - If the user doesn't see a frontend change reflected in the UI, it could mean they need to run `npm run build`, `npm run dev`, or `composer run dev`. Ask them.

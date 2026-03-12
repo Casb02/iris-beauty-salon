@@ -3,4 +3,6 @@ email:
   -
     id: p09LqYa0Bcc9sQVMnT0AE
     to: info@irisbeautysalon.nl
-    mailer: smtp
+    from: '{{ config:mail:from:address }}'
+    reply_to: '{{ email }}'
+    subject: 'Nieuw contactbericht van {{ name }}'

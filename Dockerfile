@@ -27,6 +27,7 @@ RUN apt update && apt install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) \
     bcmath \
+    exif \
     gd \
     intl \
     mbstring \
